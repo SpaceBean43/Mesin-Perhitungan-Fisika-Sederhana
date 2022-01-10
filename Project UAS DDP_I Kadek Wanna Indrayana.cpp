@@ -25,11 +25,11 @@ int main(){
         cout<<"=================================="<<endl;
         cout<<"ingin mencari yang mana?"<<endl;
         cout<<"1.kecepatan (v)"<<endl;
-	    cout<<"2.jarak (s)"<<endl;
-		cout<<"3.waktu (t)"<<endl;
-		cout<<"pilihan anda? ";
-		cin>>pilihan1;
-		cout<<"=================================="<<endl;
+	cout<<"2.jarak (s)"<<endl;
+	cout<<"3.waktu (t)"<<endl;
+	cout<<"pilihan anda? ";
+	cin>>pilihan1;
+	cout<<"=================================="<<endl;
 		
 		switch (pilihan1)
 		{
@@ -75,7 +75,7 @@ int main(){
 	        for(int i=0;i<4;i++){
 	           cout<<kembali[i]<<endl;
 	        }
-		    cin>>looping;
+		   cin>>looping;
 		    if (looping=='1'){
 		        goto kecepatan;
 		    }
@@ -98,17 +98,17 @@ int main(){
         cout<<"=================================="<<endl;
         cout<<"ingin mencari yang mana?"<<endl;
         cout<<"1.besar gaya (F)"<<endl;
-	    cout<<"2.panjang bidang miring (L)"<<endl;
-		cout<<"3.tinggi bidang miring (h)"<<endl;
-		cout<<"4.berat benda (w)"<<endl;
-		cout<<"pilihan anda? ";
-		cin>>pilihan1;
-		cout<<"=================================="<<endl;
+	cout<<"2.panjang bidang miring (L)"<<endl;
+	cout<<"3.tinggi bidang miring (h)"<<endl;
+	cout<<"4.berat benda (w)"<<endl;
+	cout<<"pilihan anda? ";
+	cin>>pilihan1;
+	cout<<"=================================="<<endl;
 		
 		switch(pilihan1)
 		{
-        case 1:
-            cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
+        	case 1:
+            	    cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
 		    cin>>tinggi;
 		    cout<<"masukkan panjang bidang miring dalam satuan (m): ";
 		    cin>>panjang;
@@ -118,8 +118,8 @@ int main(){
 		    hasil1=tinggi/panjang*berat;
 		    cout<<"besar gaya= "<<hasil1<<" N"<<endl;
 		    break;
-        case 2:
-            cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
+        	case 2:
+            	    cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
 		    cin>>tinggi;
 		    cout<<"masukkan besar gaya dalam satuan (N): ";
 		    cin>>gaya;
@@ -129,8 +129,8 @@ int main(){
 		    hasil1=berat/gaya*tinggi;
 		    cout<<"panjang bidang miring (L)= "<<hasil1<<" m"<<endl;
 		    break;
-        case 3:
-            cout<<"masukkan besar gaya dalam satuan (N): ";
+        	case 3:
+            	    cout<<"masukkan besar gaya dalam satuan (N): ";
 		    cin>>gaya;
 		    cout<<"masukkan panjang bidang miring dalam satuan (m): ";
 		    cin>>panjang;
@@ -140,8 +140,8 @@ int main(){
 		    hasil1=gaya/berat*panjang;
 		    cout<<"tinggi bidang miring (h)= "<<hasil1<<" m"<<endl;
 		    break;
-        case 4:
-            cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
+        	case 4:
+            	    cout<<"masukkan tiggi bidang miring dalam satuan (m): ";
 		    cin>>tinggi;
 		    cout<<"masukkan panjang bidang miring dalam satuan (m): ";
 		    cin>>panjang;
@@ -160,7 +160,7 @@ int main(){
 	        for(int i=0;i<4;i++){
 	           cout<<kembali[i]<<endl;
 	        }
-		    cin>>looping;
+		   cin>>looping;
 		    if (looping=='1'){
 		        goto miring;
 		    }
@@ -183,65 +183,65 @@ int main(){
         cout<<"=================================="<<endl;
         cout<<"ingin mengkonversi yang mana?"<<endl;
         cout<<"1.celcius (C)"<<endl;
-	    cout<<"2.fahrenheit (F)"<<endl;
-		cout<<"3.reamur (R)"<<endl;
-		cout<<"4.kelvin (K)"<<endl;
-		cout<<"pilihan anda? ";
-		cin>>pilihan1;
-		cout<<"=================================="<<endl;
+	cout<<"2.fahrenheit (F)"<<endl;
+	cout<<"3.reamur (R)"<<endl;
+	cout<<"4.kelvin (K)"<<endl;
+	cout<<"pilihan anda? ";
+	cin>>pilihan1;
+	cout<<"=================================="<<endl;
 		
 		switch(pilihan1)
 		{
-        case 1:
-            cout<<"masukkan nilai celcius: "<<endl;
-            cin>>celcius;
-            cout<<"rumus konversi ke fahrenheit (F= C*9/5+32)"<<endl;
-            cout<<"fahrenheit (F)= "<<celcius*1.8 + 32<<endl;
-            cout<<"rumus konversi ke reamur (R= C*4/5)"<<endl;
-            cout<<"reamur (R)= "<<celcius*0.8<<endl;
-            cout<<"rumus konfersi ke kelvin (K= C+273)"<<endl;
-            cout<<"kelvin (K)= "<<celcius + 273<<endl;
-            break;
-        case 2:
-            cout<<"masukkan nilai fahrenheit: "<<endl;
-            cin>>fahrenheit;
-            cout<<"rumus konversi ke celcius (C= (F-32)*5/9)"<<endl;
-            cout<<"celcius (C)= "<<(fahrenheit - 32)/1.8<<endl;
-            cout<<"rumus konversi ke reamur (R= (F-32)*4/9)"<<endl;
-            cout<<"reamur (R)= "<<(fahrenheit - 32)/2.25<<endl;
-            cout<<"rumus konfersi ke kelvin (K= (F-32)*5/9+273"<<endl;
-            cout<<"kelvin (K)= "<<(fahrenheit - 32)*5/9 + 273<<endl;
-            break;
-        case 3:
-            cout<<"masukkan nilai reamur: "<<endl;
-            cin>>reamur;
-            cout<<"rumus konversi ke fahrenheit (F= R*9/4+32)"<<endl;
-            cout<<"fahrenheit (F)= "<<reamur*2.25 + 32<<endl;
-            cout<<"rumus konversi ke celcius (C= R*5/4)"<<endl;
-            cout<<"celcius (C)= "<<reamur/0.8<<endl;
-            cout<<"rumus konfersi ke kelvin (K= R*5/4+273)"<<endl;
-            cout<<"kelvin (K)= "<<reamur/0.8 + 273<<endl;
-            break;
-        case 4:
-            cout<<"masukkan nilai kelvin: "<<endl;
-            cin>>kelvin;
-            cout<<"rumus konversi ke fahrenheit (F= (K-273)*9/5+32"<<endl;
-            cout<<"fahrenheit (F)= "<<(kelvin - 273)*1.8 + 32<<endl;
-            cout<<"rumus konversi ke reamur (R= (K-273)*4/5)"<<endl;
-            cout<<"reamur (R)= "<<(kelvin - 273)*0.8<<endl;
-            cout<<"rumus konfersi ke celcius (C= K-273)"<<endl;
-            cout<<"kelvin (K)= "<<kelvin - 273<<endl;
-            break;
-        default:
-            cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
+        	case 1:
+		    cout<<"masukkan nilai celcius: "<<endl;
+		    cin>>celcius;
+		    cout<<"rumus konversi ke fahrenheit (F= C*9/5+32)"<<endl;
+		    cout<<"fahrenheit (F)= "<<celcius*1.8 + 32<<endl;
+		    cout<<"rumus konversi ke reamur (R= C*4/5)"<<endl;
+		    cout<<"reamur (R)= "<<celcius*0.8<<endl;
+		    cout<<"rumus konfersi ke kelvin (K= C+273)"<<endl;
+		    cout<<"kelvin (K)= "<<celcius + 273<<endl;
 		    break;
+		case 2:
+		    cout<<"masukkan nilai fahrenheit: "<<endl;
+		    cin>>fahrenheit;
+		    cout<<"rumus konversi ke celcius (C= (F-32)*5/9)"<<endl;
+		    cout<<"celcius (C)= "<<(fahrenheit - 32)/1.8<<endl;
+		    cout<<"rumus konversi ke reamur (R= (F-32)*4/9)"<<endl;
+		    cout<<"reamur (R)= "<<(fahrenheit - 32)/2.25<<endl;
+		    cout<<"rumus konfersi ke kelvin (K= (F-32)*5/9+273"<<endl;
+		    cout<<"kelvin (K)= "<<(fahrenheit - 32)*5/9 + 273<<endl;
+		    break;
+		case 3:
+		    cout<<"masukkan nilai reamur: "<<endl;
+		    cin>>reamur;
+		    cout<<"rumus konversi ke fahrenheit (F= R*9/4+32)"<<endl;
+		    cout<<"fahrenheit (F)= "<<reamur*2.25 + 32<<endl;
+		    cout<<"rumus konversi ke celcius (C= R*5/4)"<<endl;
+		    cout<<"celcius (C)= "<<reamur/0.8<<endl;
+		    cout<<"rumus konfersi ke kelvin (K= R*5/4+273)"<<endl;
+		    cout<<"kelvin (K)= "<<reamur/0.8 + 273<<endl;
+		    break;
+		case 4:
+		    cout<<"masukkan nilai kelvin: "<<endl;
+		    cin>>kelvin;
+		    cout<<"rumus konversi ke fahrenheit (F= (K-273)*9/5+32"<<endl;
+		    cout<<"fahrenheit (F)= "<<(kelvin - 273)*1.8 + 32<<endl;
+		    cout<<"rumus konversi ke reamur (R= (K-273)*4/5)"<<endl;
+		    cout<<"reamur (R)= "<<(kelvin - 273)*0.8<<endl;
+		    cout<<"rumus konfersi ke celcius (C= K-273)"<<endl;
+		    cout<<"kelvin (K)= "<<kelvin - 273<<endl;
+		    break;
+		default:
+		    cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
+			    break;
 		}
 		ulang2:
 	        cout<<"=================================="<<endl;
 	        for(int i=0;i<4;i++){
 	           cout<<kembali[i]<<endl;
 	        }
-		    cin>>looping;
+		   cin>>looping;
 		    if (looping=='1'){
 		        goto suhu;
 		    }
@@ -258,9 +258,9 @@ int main(){
 		        goto ulang2;
 		    }
     }
-	else {
-	    cout<<"=================================="<<endl;
-	    cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
-		goto awal;
-	}
+    else {
+	cout<<"=================================="<<endl;
+	cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
+	goto awal;
+    }
 }
