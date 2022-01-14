@@ -1,11 +1,10 @@
 #include <iostream>
-
 using namespace std;
 
 int main(){
     int kelas, materi, pilihan1;
-    float jarak, waktu, kecepatan, hasil1, hasil2;
-    float tinggi, panjang, berat, gaya;
+    float jarak, waktu, kecepatan, hasil1, hasil2, kedalaman;
+    float tinggi, panjang, berat, gaya, gelombang, tiba;
     float celcius, fahrenheit, reamur, kelvin;
     string kembali[4]={"ingin menghitung ulang? ","1.iya","2.tidak","3.kembali ke awal"};
     char looping;
@@ -16,7 +15,7 @@ int main(){
     awal:
     cout<<"=================================="<<endl;
     cout<<"Silahkan Pilih Materi Anda"<<endl;
-    cout<<"1.rumus kecepatan\n2.rumus bidang miring\n3.konversi suhu"<<endl;
+    cout<<"1.rumus kecepatan\n2.rumus bidang miring\n3.konversi suhu\n4.rumus kedalaman"<<endl;
     cout<<"materi? ";
     cin>>materi;
     if (materi==1){
@@ -244,6 +243,75 @@ int main(){
 		   cin>>looping;
 		    if (looping=='1'){
 		        goto suhu;
+		    }
+		    else if (looping=='2'){
+		        cout<<"=================================="<<endl;
+		        cout<<"Terima kasih sudah menggunakan program kami"<<endl;
+		        return 0;
+		    }
+		    else if (looping=='3'){
+		        goto awal;
+		    }
+		    else {
+		        cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
+		        goto ulang2;
+		    }
+    }
+    else if (materi==4){
+
+	kedalaman:
+	cout<<"=================================="<<endl;
+        cout<<"ingin mencari yang mana?"<<endl;
+	cout<<"1.kedalaman (s)"<<endl;
+	cout<<"2.kecepatan gelombang (v)"<<endl;
+	cout<<"3.waktu gelombang tiba (t)"<<endl;
+	cout<<"pilihan anda? ";
+	cin>>pilihan1;
+	cout<<"=================================="<<endl;
+
+		switch(pilihan1)
+		{
+		case 1:
+		    cout<<"masukkan kecepatan gelombang dalam satuan (m/s): ";
+		    cin>>gelombang;
+		    cout<<"masukkan waktu gelombang tiba dalam satuan (s): ";
+		    cin>>tiba;
+		    cout<<"rumus kedalaman (s= v*t/2)"<<endl;
+		    hasil1=gelombang*tiba/2;
+		    hasil2=hasil1/1000;
+		    cout<<"kedalaman (s)= "<<hasil1<<" m atau ";
+		    cout<<hasil2<<" km"<<endl;
+		    break;
+		case 2:
+		    cout<<"masukkan kedalaman dalam satuan (m): ";
+		    cin>>kedalaman;
+		    cout<<"masukkan waktu gelombang tiba dalam satuan (s): ";
+		    cin>>tiba;
+		    cout<<"rumus kecepatan gelombang (v)= s*2/t)"<<endl;
+		    hasil1=kedalaman*2/tiba;
+		    cout<<"kecepatan gelombang (v)= "<<hasil1<<" m/s"<<endl;
+		    break;
+		case 3:
+		    cout<<"masukkan kecepatan gelombang dalam satuan (m/s): ";
+		    cin>>gelombang;
+		    cout<<"masukkan kedalaman dalam satuan (m): ";
+		    cin>>kedalaman;
+		    cout<<"rumus waktu gelombang tiba (t)= s*2/v)"<<endl;
+		    hasil1=kedalaman*2/gelombang;
+		    cout<<"waktu gelombang tiba (v)= "<<hasil1<<" s"<<endl;
+		    break;
+		default:
+            	    cout<<"masih dalam tahap pengembangan, mohon tunggu update selanjutnya"<<endl;
+		    break;
+		}
+		ulang3:
+	        cout<<"=================================="<<endl;
+	        for(int i=0;i<4;i++){
+	            cout<<kembali[i]<<endl;
+	        }
+		    cin>>looping;
+		    if (looping=='1'){
+		        goto kedalaman;
 		    }
 		    else if (looping=='2'){
 		        cout<<"=================================="<<endl;
